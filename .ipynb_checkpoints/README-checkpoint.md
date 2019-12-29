@@ -1,2 +1,0 @@
-# webScrapingPractice
-web-scraping practice 
