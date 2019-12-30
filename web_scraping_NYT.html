@@ -13076,7 +13076,7 @@ div#notebook {
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># import libraries </span>
@@ -13088,7 +13088,7 @@ div#notebook {
 <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
     <span class="s1">&#39;https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html&#39;</span><span class="p">)</span>
 <span class="c1"># parses the HTML into a special object to read it and make sense of the structure</span>
-<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
 <span class="c1"># collecting all information with the sepcific HTML tag </span>
 <span class="n">results</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;span&#39;</span><span class="p">,</span> <span class="n">attrs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;class&#39;</span><span class="p">:</span> <span class="s1">&#39;short-desc&#39;</span><span class="p">})</span> 
 
@@ -13112,87 +13112,6 @@ div#notebook {
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[5]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>date</th>
-      <th>lie</th>
-      <th>explanation</th>
-      <th>url</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>2017-01-21</td>
-      <td>I wasn't a fan of Iraq. I didn't want to go in...</td>
-      <td>He was for an invasion before he was against it.</td>
-      <td>https://www.buzzfeed.com/andrewkaczynski/in-20...</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2017-01-21</td>
-      <td>A reporter for Time magazine — and I have been...</td>
-      <td>Trump was on the cover 11 times and Nixon appe...</td>
-      <td>http://nation.time.com/2013/11/06/10-things-yo...</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2017-01-23</td>
-      <td>Between 3 million and 5 million illegal votes ...</td>
-      <td>There's no evidence of illegal voting.</td>
-      <td>https://www.nytimes.com/2017/01/23/us/politics...</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>2017-01-25</td>
-      <td>Now, the audience was the biggest ever. But th...</td>
-      <td>Official aerial photos show Obama's 2009 inaug...</td>
-      <td>https://www.nytimes.com/2017/01/21/us/politics...</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>2017-01-25</td>
-      <td>Take a look at the Pew reports (which show vot...</td>
-      <td>The report never mentioned voter fraud.</td>
-      <td>https://www.nytimes.com/2017/01/24/us/politics...</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
 </div>
 </div>
 
